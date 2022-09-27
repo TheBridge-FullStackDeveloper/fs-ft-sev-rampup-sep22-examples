@@ -1,0 +1,34 @@
+h3 {
+    color: blue;
+    border: 1px solid red;
+}
+
+h3 {
+    color: orange;
+}
+
+.warning {
+    color: yellowgreen;
+}
+
+.decorated-title {
+    border-bottom: 1px solid black;
+}
+
+body {
+    color: red;
+}
+
+a {
+    border: 1px solid red;
+}
+
+
+/* 
+Cascada 
+Especificidad
+herencia 
+*/
+
+
+
