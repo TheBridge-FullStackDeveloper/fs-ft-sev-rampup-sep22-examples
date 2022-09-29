@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* RESET */
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+
+
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+</style>
+
+<body>
+   
+    <!-- 
+
+        mapa de bits
+        jgp - fotografias
+        png - canal alfa
+        gif - animaciones
+
+        vectorial
+        svg - vectorial
+
+
+
+    -->
+    <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://petplan.es/wp-content/uploads/2022/09/anna-dudkova-md2_P9X7t4M-unsplash-4-scaled-thegem-post-thumb-large.jpg" alt="Perrito en mapa de bits">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+        <defs>
+        <!-- Define all shapes that fall under shadows -->
+          <g id="feather" fill="#c24a4c" stroke="#5b020e">
+            <path d="M184 79 Q116 33 73 62
+                     L108 73 Q86 67 66 70
+                     Q31 106 12 167
+                     Q52 114 92 95
+                     Q125 86 154 94"
+            />
+            <path d="M103 58 83 49 96.5 52.2" />
+          </g>
+          <g id="hat" fill="#ce8e67" stroke="#793115">
+            <path d="M330 144 Q308 67 270 25
+                 Q202 -6 165 12
+                 L201 24 203 29 206 29 191 100"
+            />
+            <path d="M203 29 Q199 22 203 16" />
+            <path d="M212 20 C200 33 198 61 198 78" />
+          </g>
+          <path id="hat-brim" fill="#d3504c" stroke="#793115"
+            d="M379 113 359 126 335 153
+               C281 163 252 108 210 134
+               L207 88 238 79
+               Q273 91 321 130
+               L345 104
+               Q364 103 379 113"
+          />
+          <path id="face" fill="#f4d6b4" stroke="none"
+            d="M237 122 C235 141 211 179 256 186
+               C221 186 202 204 238 234
+               C260 247 294 248 308 232
+               L329 186 330 125"
+          />
+          <path id="head" fill="#2b070b" stroke="none"
+            d="M225 111 333 128 333 207 273 245
+               Q219 236 200 200
+               Q193 150 225 111"
+          />
+          <g id="right-ear">
+            <path d="M168 181 C227 185 243 69 184 64 C153 55 95 154 166 181" />
+          </g>
+        
+        <!-- Define shadow masks -->
+          <mask id="shadowMask">
+            <rect fill="black" x="0" y="0" width="500" height="500" />
+            <use href="#feather" fill="white" stroke="white" />
+            <use href="#head" fill="white" stroke="white" />
+            <use href="#hat-brim" fill="white" stroke="white" />
+            <use href="#hat" fill="white" stroke="white" />
+            <use href="#face" fill="white" stroke="white" />
+          </mask>
+          <mask id="shadowMask2">
+            <rect fill="black" x="0" y="0" width="500" height="500" />
+            <use href="#right-ear" fill="white" stroke="white" />
+          </mask>
+        </defs>
+        
+        <!-- Left Ear -->
+        <path fill="#2b070b" stroke="none"
+          d="M281 47 C308 20 383 90 331 141" />
+        
+        <!-- Head -->
+        <use href="#head" />
+        
+        <!-- Face -->
+        <use href="#face" />
+        
+        <!-- Eyes Gradient -->
+        <defs>
+          <linearGradient id="EyesGradient" gradientTransform="rotate(60)">
+            <stop offset="85%" stop-color="#330107" />
+            <stop offset="100%" stop-color="#b86d46" />
+          </linearGradient>
+        </defs>
+        <!-- Right Eye -->
+        <ellipse fill="url(#EyesGradient)"
+          cx="289" cy="156" rx="8" ry="23"
+          transform="rotate(-23,289,156)"
+        />
+        <!-- Left Eye -->
+        <ellipse fill="url(#EyesGradient)"
+          cx="321" cy="157" rx="4" ry="16"
+          transform="rotate(-10,321,157)"
+        />
+        
+        <!-- Smile -->
+        <path fill="none" stroke="#b07452"
+          d="M308 232 C279 235 253 211 244 206" />
+        <path fill="#b07452" stroke="none"
+          d="M238 208 C237 206 251 199 252 203
+             C249 207 239 207 238 208"
+        />
+        
+        <!-- Hat -->
+        <path fill="#892829" stroke="none"
+          d="M314 108 337 121 320 136" />
+        <use href="#hat" />
+        <path fill="none" stroke="#793115"
+          d="M316 126 Q298 69 268 27" />
+        <path fill="#d3504c" stroke="#793115"
+          d="M298 76 297 81 275 72 248 27
+             Q212 35 194 70
+             L205 80
+             Q221 58 250 50
+             Q266 96 308 106
+             L309 107 309 100"
+        />
+        <path fill="#fcf2d8" stroke="none"
+          d="M297 69 C298 68 273 28 269.5 27.5
+             C277 24 316 93 317 108
+             L309 93 309 100 298 77"
+        />
+        <use href="#hat-brim" />
+        <path fill="#ce8e67" stroke="#793115"
+          d="M220 95 241 88
+             Q280 121 324 139
+             Q339 129 350 113
+             Q363 112 372 115
+             L359 122
+             Q352 139 335 152
+             C296 162 236 113 219 120"
+        />
+        
+        <!-- Feather -->
+        <use href="#feather" />
+        
+        <!-- Feather Lines -->
+        <g fill="none" stroke="#5b020e" stroke-width="0.5" opacity="0.6">
+          <path d="M160 71 C159 65 157 63 156 63" />
+          <path d="M111 51 C 131 49 151 77 149 75
+                   C146 69 114 48 111 51"
+          />
+          <path d="M59 77 81 75" />
+          <path d="M42 102 64 95" />
+          <path d="M41 108 90 92" />
+          <path d="M16 154 26 144" />
+        </g>
+        
+        
+        <!-- Shadowing -->
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.25"
+          d="M132 97 117 60 81 46 172 4 196 18 215 19 246 80 221 83 132 97" />
+        
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.15"
+          d="M172 4 196 18 215 19 224 38 280 27 209 -28" />
+        
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.25"
+          d="M353 190 C353 177 200 153 199 172
+             L188 122 C227 60 265 185 360 143"
+        />
+        
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.25"
+          d="M 100 97 Q74 83 46 84 L-17 204" />
+        
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.25"
+          d="M346 99 Q342 119 357 137 L398 103" />
+        
+        <path fill="#521212" mask="url(#shadowMask)" fill-opacity="0.1"
+          d="M301 243 Q239 243 190 188 L194 249" />
+        
+        
+        <!-- Snout -->
+        <path fill="#f4d6b4" stroke="#b07452"
+           d="M290 187 C349 132 381 213 308 232" />
+        
+        <!-- Nose -->
+        <path fill="#2d070b" stroke="none"
+           d="M321 184 C312 170 348 147 357 160
+              C371 173 345 207 321 184"
+        />
+        <path fill="#f4d6b4" stroke="none"
+           d="M320 183 C319 179 346 155 356.2 159
+              L359.5 163
+              C340 162 325 177 320 183"
+        />
+        
+        <!-- Right ear -->
+        <path fill="#faf3da" stroke="none"
+          d="M172 65 C216 49 229 113 220 129" />
+        
+        <use href="#right-ear" fill="#330b19" stroke="none" />
+        
+        <path fill="black" stroke="none" mask="url(#shadowMask2)" fill-opacity="0.25"
+          d="M125 110 209 179 136 189"
+        />
+        
+        </svg>
+        
+</body>
+
+</html>
