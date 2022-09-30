@@ -15,7 +15,7 @@
         }
 
         header {
-            background-color: #242424;
+            background-color: var(--pastel-red);
             display: flex;
             justify-content: space-between;
             color: var(--my-white);
@@ -23,6 +23,16 @@
             line-height: 2;
         }
 
+        header:hover nav {
+            display: block;
+        }
+            header:hover img {
+                display: none;
+            }
+
+        header nav {
+            display: none;
+        }
         header nav ul {
             display: flex;
         } 
@@ -42,11 +52,39 @@
             text-decoration: none;
         }
             header nav a:hover {
-                color: var(--pastel-red);
+                color: var(--pastel-yellow);
                 text-decoration: underline;
             }
-        
 
+            /* DESDE iPads, Tablets MOSTRAMOS MENU*/ 
+        @media (min-width: 768px) {
+
+            header nav {
+            display: block;
+            }
+
+            header img {
+                display: none;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
         /*
         input {
             background-color: red;
@@ -55,6 +93,46 @@
             background-color: blue;
         }
         */
+
+        /* small Mobile */ 
+        /*
+        @media (min-width: 0px) {
+           
+        }
+*/
+         /* Mobile */ 
+         /*
+         @media (min-width: 480px) {
+             body {
+                 background-color: var(--pastel-yellow);
+             }
+
+             
+         }
+         */
+
+          
+
+        /* Small screens, laptops */ 
+        /*
+        @media (min-width: 1024px) {
+            body {
+                background-color: var(--pastel-green);
+            }
+        }
+*/
+        /* Small screens, laptops */ 
+
+     /*   
+        @media (min-width: 1201px) {
+            body {
+                background-color: var(--pastel-purple);
+            }
+        }
+*/
+      
+       
+      
     </style>
 </head>
 <body>
@@ -71,7 +149,10 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
+        <img width="40" src="hamburguesa.png" alt="es el icono del menu no se come">
     </header>
+
+
 
     <!-- <input type="text"> -->
 </body>
