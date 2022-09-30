@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .wrapper {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: 
+        "h h h"
+        "m b5 b6"
+        "m b8 b9"
+        "m b11 b12";
+    }
+        .wrapper:hover div:first-child {
+   
+        }
+
+    .wrapper > * {
+        padding: 1rem;
+        border: 1px solid red;
+    }
+
+    .box1 {
+        background-color: var(--pastel-red);
+
+        /* grid-column: span 2; */
+
+        grid-area: h;
+    }
+        /*
+        .box1:hover {
+            grid-area: b6;
+        }
+        */
+
+    .box2 {
+        background-color: var(--pastel-green);
+        /* grid-column: 2/4; */
+        grid-area: m;
+    }
+
+    .box3 {
+        background-color: var(--pastel-yellow);
+    }
+
+    .box4 {
+        background-color: var(--pastel-blue);
+       
+    }
+    .box5 {
+        background-color: var(--pastel-purple);
+    }
+    .box6 {
+        background-color: var(--pastel-dark-green);
+    }
+    .box7 {
+        background-color: var(--pastel-light-green);
+    }
+    .box8 {
+        background-color: orange;
+    }
+</style>
+<body>
+    
+   <!-- .wrapper>.box$*8{$} -->
+   <div class="wrapper">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box6">6</div>
+    <div class="box7">7</div>
+    <div class="box8">8</div>
+   </div>
+</body>
+</html>

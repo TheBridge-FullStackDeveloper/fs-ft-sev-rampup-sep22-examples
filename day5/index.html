@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Document</title>
+
+    <style>
+
+
+        #brand {
+            color: var(--pastel-yellow);
+        }
+
+        header {
+            background-color: #242424;
+            display: flex;
+            justify-content: space-between;
+            color: var(--my-white);
+            padding: .2rem .5rem;
+            line-height: 2;
+        }
+
+        header nav ul {
+            display: flex;
+        } 
+            header nav ul li {
+                margin: 0 .5rem;
+            }
+
+            header nav ul li:first-child {
+                margin-left: 0
+            }
+            header nav ul li:last-child {
+                margin-right: 0;
+            }
+
+        header nav a {
+            color: var(--my-white);
+            text-decoration: none;
+        }
+            header nav a:hover {
+                color: var(--pastel-red);
+                text-decoration: underline;
+            }
+        
+
+        /*
+        input {
+            background-color: red;
+        }
+        input:focus {
+            background-color: blue;
+        }
+        */
+    </style>
+</head>
+<body>
+    
+
+    <!-- header>h1+nav>ul>li*4>a[href="#"] -->
+    <header>
+        <h1 id="brand">SuperLogo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Quién somos</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <input type="text"> -->
+</body>
+</html>
+
+
