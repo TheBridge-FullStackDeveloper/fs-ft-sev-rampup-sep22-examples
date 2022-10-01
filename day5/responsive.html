@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        body {
+            
+            font-size: 16px;
+        }
+            body > * {
+                padding: 0 1rem;
+            }
+
+        header {
+            display: flex;
+            background-color: var(--my-black);
+            justify-content: space-between;
+            color: var(--my-white);
+            margin-bottom: 1.5rem;
+            padding: .5rem;
+        }
+
+        header > * {
+            line-height: 1.3rem;
+        }
+
+        header nav .btn-menu {
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+            header nav ul {
+                display: none;
+            }
+            header nav:hover ul {
+                display: block;
+            }
+            header nav:hover .btn-menu {
+                display: none;
+            }
+
+        header nav a {
+            color: var(--my-whit);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            header nav a:hover {
+                text-decoration: underline; 
+            }
+
+        section {
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        section article > img {
+            width: 100%
+        }
+
+        section article > time {
+            font-style: italic;
+        }
+       
+        h2 {
+            font-weight: bold;
+            font-size: 1.3em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+
+        @media (min-width: 768px) {
+
+            header nav .btn-menu {
+                display: none;
+            }
+
+            header nav ul {
+                display: block;
+            }
+
+            section {
+                grid-template-columns: repeat(2, 1fr);
+
+                grid-gap: 1rem;
+            }
+
+            section article:first-child {
+                grid-column: 1/3;
+            }
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <ul>
+                <li><a href="#noticia-1">Noticia 1</a></li>
+                <li><a href="#noticia-2">Noticia 2</a></li>
+                <li><a href="#noticia-3">Noticia 3</a></li>
+                <li><a href="#noticia-4">Noticia 4</a></li>
+                <li><a href="#noticia-5">Noticia 5</a></li>
+            </ul>
+
+            <i class="fa-solid fa-bars btn-menu"></i>
+        </nav>
+    </header>
+
+
+    <section>
+        <article id="noticia-1">
+            <h2>Noticia 1</h2>
+            <time datetime="2022-10-01">Hoy</time>
+
+            <img src="https://static.eldiario.es/clip/5c07bb53-6cfd-45d4-8a2d-c27ead32c52c_16-9-discover-aspect-ratio_default_0.jpg" alt="Enfermera vacunando anciano">
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, in! Iure incidunt cupiditate commodi distinctio in explicabo similique facilis cumque.</p>
+            <p>Quos porro quae et nam, natus quas sapiente laboriosam assumenda adipisci esse labore vel, molestias qui molestiae soluta ipsum. Placeat!</p>
+            <p>Obcaecati doloribus tenetur possimus dicta omnis harum ullam, excepturi ipsa eum consequatur. Atque sed eligendi suscipit iste consequatur vel assumenda.</p>
+        </article>
+
+        <article id="noticia-2">
+            <h2>Noticia 2</h2>
+            <time datetime="2022-10-01">Hoy</time>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, in! Iure incidunt cupiditate commodi distinctio in explicabo similique facilis cumque.</p>
+            <p>Quos porro quae et nam, natus quas sapiente laboriosam assumenda adipisci esse labore vel, molestias qui molestiae soluta ipsum. Placeat!</p>
+            <p>Obcaecati doloribus tenetur possimus dicta omnis harum ullam, excepturi ipsa eum consequatur. Atque sed eligendi suscipit iste consequatur vel assumenda.</p>
+        </article>
+
+        <article id="noticia-3">
+            <h2>Noticia 3</h2>
+            <time datetime="2022-10-01">Hoy</time>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, in! Iure incidunt cupiditate commodi distinctio in explicabo similique facilis cumque.</p>
+            <p>Quos porro quae et nam, natus quas sapiente laboriosam assumenda adipisci esse labore vel, molestias qui molestiae soluta ipsum. Placeat!</p>
+            <p>Obcaecati doloribus tenetur possimus dicta omnis harum ullam, excepturi ipsa eum consequatur. Atque sed eligendi suscipit iste consequatur vel assumenda.</p>
+        </article>
+
+        <article id="noticia-4">
+            <h2>Noticia 3</h2>
+            <time datetime="2022-10-01">Hoy</time>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, in! Iure incidunt cupiditate commodi distinctio in explicabo similique facilis cumque.</p>
+            <p>Quos porro quae et nam, natus quas sapiente laboriosam assumenda adipisci esse labore vel, molestias qui molestiae soluta ipsum. Placeat!</p>
+            <p>Obcaecati doloribus tenetur possimus dicta omnis harum ullam, excepturi ipsa eum consequatur. Atque sed eligendi suscipit iste consequatur vel assumenda.</p>
+        </article>
+
+        <article id="noticia-5">
+            <h2>Noticia 5</h2>
+            <time datetime="2022-10-01">Hoy</time>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, in! Iure incidunt cupiditate commodi distinctio in explicabo similique facilis cumque.</p>
+            <p>Quos porro quae et nam, natus quas sapiente laboriosam assumenda adipisci esse labore vel, molestias qui molestiae soluta ipsum. Placeat!</p>
+            <p>Obcaecati doloribus tenetur possimus dicta omnis harum ullam, excepturi ipsa eum consequatur. Atque sed eligendi suscipit iste consequatur vel assumenda.</p>
+        </article>
+    </section>
+
+</body>
+</html>
