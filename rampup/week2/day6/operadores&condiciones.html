@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezamos con js</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+         // Operadores de asignación =
+        // Operadores aritmeticos + - / * 
+        // Operadores de comparación == === != !== < > <= >= 
+        
+        
+        let edad = 19;
+        let user = "Andina";
+        
+        console.log("Antes de entrar en el if");
+
+
+        if (edad >= 18) {
+            // Grupo de sentencia que ejecuta 
+            // si la condicion evalua en true
+            console.log("PERMITE PASO");
+        } else {
+            // Grupo de sentencia que ejecuta 
+            // si la condicion evalua en false
+            console.log("NO PERMITE PASO");
+        }
+        
+        console.log("DESPUES DE EVALUAR EL IF SIGUE CON LA EJECUCIÓN");
+
+        user = "Rubén"; 
+
+        console.log("Nuevo user:")
+        console.log(user);
+
+        console.log("Estoy ejecutandome dentro de un documento html");
+
+
+        // Operadores logicos Y(&&) O(||) 
+
+        if (edad >= 18 && user === "Andina") {
+            // Grupo de sentencia que ejecuta 
+            // si la expresión de las dos comparaciones
+            // evalua en true
+            console.log("PERMITE PASO");
+        } else {
+            // Grupo de sentencia que ejecuta 
+            // si alguna de las comparaciones
+            // no evalua en true 
+            console.log("NO PERMITE PASO");
+        }
+
+        let jefa = true;
+
+        if(edad >= 18 || jefa) {
+            // Grupo de sentencia que ejecuta 
+            // si alguna de las dos comparaciones
+            // evalua en true
+            console.log("PERMITE PASO");
+        } // el bloque de sentencias del else es siempre opcional
+    
+
+
+    </script>
+</body>
+</html>
