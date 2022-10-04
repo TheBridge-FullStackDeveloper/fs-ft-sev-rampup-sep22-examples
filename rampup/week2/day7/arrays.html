@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Declaración y asignación de arrays
+        let dogs = ["Tika", "Cooper", "Tina", "Lolita", "Kira", "ChanChan", "Nara", "Happy"];
+        
+        
+        let cats = ["Gaia", "Suri", "Miyazaki", "Odín"];
+                  
+        let edades = [13,22,1,30];
+                    
+        let mixto = ["uno", 3, "casa"];
+
+        let animales = [dogs, cats]
+
+        let frutasYverduras = [['peras','manzanas','platanos'],['cebolla', 'brocoli']]
+        let aprobadosRampup = [false, true, false, true, true];
+
+
+
+        // Accedo a las posiciones del array
+
+        console.log(dogs[1]);
+        console.log(frutasYverduras[0][1])
+
+        console.log(aprobadosRampup[0])
+
+        // Operador de concatenación + 
+
+        console.log(dogs[5] + " le gusta comer " + frutasYverduras[1][1]);
+        
+        // backtics 
+
+        console.log(`${dogs[5]}`)
+
+
+
+        let numeros = [13, 21, 44, 25 ,21 , 23];
+
+
+        // Bucles 
+
+        // While
+        
+        
+        // for
+        
+
+
+        console.log("Por aquí vengo");
+
+        let total = 0;
+
+        for (
+            let i = 1; // Inicialización variable de control
+            i <= 10; // Condicion que determina si sale del bucle o sigue iterando
+            i++ // Operación sobre la variable de control al final de cada iteración
+        ) { 
+            
+        
+            //console.log(i);
+
+            total += i;
+            
+        }
+
+        console.log(total);
+        console.log("Por aquí me voy-----------------");
+       
+
+        for (
+            let i = 0; // Inicialización variable de control
+            i < cats.length; // Condicion que determina si sale del bucle o sigue iterando
+            i++ // Operación sobre la variable de control al final de cada iteración
+        ) { 
+        
+            console.log(cats[i]);
+
+         //   total += i;
+            
+        }
+
+
+
+        // Longitud de un array .length
+
+        console.log(cats.length)
+
+
+        // Bucle infinito
+        /*
+        for (let i = 0; i <= 10; i--) {
+
+           console.log(i);
+
+        }
+        */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso</title>
+</head>
+<body>
+    
+
+    <script>
+
+        console.log("Empezamos el repaso");
+
+        // Camel case
+        let monthlyRent = 250.3;
+
+        // uppercase constante
+        const PI = 3.1416;
+
+        // Operador de asignación =
+
+
+        // Operadores aritmeticos 
+
+        let result = 1 - 3; // resta => -2
+        let result2 = 1 + 3 + 4 + 12; // Suma => 20
+
+        let result3 = result; 
+
+        let result4 = 2 * 3; // Multiplicar => 6
+        let r5 = 4 / 2; // División => 2
+
+        let r6 = 3 ** 2; // Potencia => 9
+
+        console.log(r6);
+
+        let r7 = 4 % 2 // Resto => 0
+        
+        let r8 = 5;
+        let r9 = r8 + 1;
+        
+        r9 = r9 + 1;
+        r9++; // Operador de incremento
+        // r9 => 8
+
+        r10 = r9++;
+
+        console.log("R9");
+        console.log(r9) // r9 => 9
+
+        console.log("R10");
+        console.log(r10); // r10 => 8
+
+
+        let edad = 30;
+        console.log(--edad) // => 29
+        console.log(edad); // => 29
+
+        edad = 4;
+        edad %= 2;
+        // edad = edad % 2; 
+        console.log("RESTO");
+        console.log(edad);
+        
+        // edad = edad + 5;
+        edad *= 5;
+        // edad = edad * 5;
+
+        // ...
+        console.log("por aquí vengo");
+        if (false) {
+            console.log("Siempre va a ejecturar este grupo de sentencias")
+        } else {
+            console.log("Esperate antes de irte que vas a decir esto");
+        }
+        console.log("por aquí me voy");
+        // ...
+
+
+        // Operadores de igualdad y comparación
+        // == === != !== < > <= >=
+
+        
+
+
+        // coercion
+        // Cuando usamos igualdad con doble igual, javascript realiza una coerción antes de resolver la expresión de igualdad. La coerción consiste en convertir el valor que está a un lado del operador al tipo del valor que está a otro lado. '4' == 4 // Coerción: 4 == 4 (true)
+        // Con triple igual forzamos la igualdad al caso de que tipo y valor sean iguales sin coerción.
+
+        if  ('4' == 4) {
+            console.log("si");
+        } else {
+            console.log("No");
+        }
+
+        // La condicion siempre se va a evaluar en true o false, o en truthy o falsy. Consultar tablas de truthy y falsy. 
+
+        // Falsy: https://www.oreilly.com/library/view/javascript-the-good/9780596517748/apas12.html
+        // truthy: https://developer.mozilla.org/es/docs/Glossary/Truthy
+
+        let resultado = 0;
+        if  (resultado) {
+            console.log("si");
+        } else {
+            console.log("No");
+        }
+
+        
+
+        // Y LOGICO o AND LOGICO => && 
+        // Ambos lados del operador deben evaluar en true
+
+        let nombre = "Rufino";
+        resultado = 1;
+        if (resultado && nombre === "Rufino" && 0) {
+            console.log("Si lo hay");
+        } else {
+            console.log("no lo hay");
+        }
+
+        
+        // O LOGICO o OR LOGICO => || 
+        // Uno o ambos lados del operador deben evaluar en true
+
+        let nombre2 = "Rufino G";
+        resultado = 1;
+        if (resultado || nombre === "Rufino" || 0) {
+            console.log("Si lo hay");
+        } else {
+            console.log("no lo hay");
+        }
+
+        let resultado12 = true && "hola";
+
+
+
+        console.log(resultado12);   
+
+        resultado && console.log("SI")
+        
+        // Operador de negación
+        
+        
+        resultado = true;
+
+        if (!resultado) {
+            console.log("No hay resultado")
+        } else {
+            console.log("Si lo hay");
+        }
+        
+        console.log(resultado);
+        
+        resultado = !resultado; // resultado = false
+        console.log(resultado);
+    </script>
+</body>
+</html>
