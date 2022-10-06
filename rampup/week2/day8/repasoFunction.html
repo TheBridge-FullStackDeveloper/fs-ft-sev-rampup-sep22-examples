@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        function superConsoleLog(mensaje) {
+            console.log("=========");
+            console.log(mensaje);
+            console.log("=========");
+            
+            console.log("--");
+        }
+ 
+        
+        
+        superConsoleLog("mensaje 1");
+
+        superConsoleLog("mensaje 2");
+
+        superConsoleLog("mensaje 3");
+
+        superConsoleLog("mensaje 6");
+       
+
+
+        function suma(num1, num2) {
+
+            return num1 + num2;
+        }
+
+        let resultado = suma(1, 3) * suma(1,1);
+        console.log(resultado);
+
+
+        function isFizz(num) {
+            return num % 3 === 0
+        }
+
+        function isBuzz(num) {
+            return num % 5 === 0
+        }  
+
+        function esMultiplo(num,multiplo) {
+            return num % multiplo === 0;
+        }
+
+        for (let i = 1; i <= 1000; i++) {
+            let fizz = esMultiplo(i, 3);
+            let buzz = esMultiplo(i, 5);
+
+            if (fizz && buzz)
+                console.log("FizzBuzz")
+            else if (fizz)
+                console.log("Fizz")
+            else if (buzz)
+                console.log("Buzz")
+            else
+                console.log(i)
+        }
+
+        let colors = ["pink",["rojo","green", "blue"],["cyan", "magenta", "yellow", "alfa"]];
+
+        console.log(colors[2][1])
+
+        colors[0] = "orange";
+
+        console.log(colors[0]);
+
+        console.log(colors[2].slice(0,2))
+
+        console.log("Ruben".length);
+
+
+        let car = {
+            color: "rojo",
+            puertas: 4,
+            plazas: 5,
+            neumaticos: "Ciudad",
+            matricula: null,
+            arranca: function () {
+                console.log("Mira como arranco")
+            },
+            frena: function () {
+                console.log("Mira como freno");
+            }   
+        }
+
+
+
+            console.log(car.color) 
+            car.arranca();
+
+            let propiedad = "neumaticos";
+
+            console.log(car[propiedad]);
+
+
+
+        
+        
+
+    </script>
+</body>
+</html>

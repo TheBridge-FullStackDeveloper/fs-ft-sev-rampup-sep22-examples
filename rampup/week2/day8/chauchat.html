@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+
+
+        
+
+        function chauchat(balas){
+            for (let i = 1; i <= balas; i++) {
+                const fallo = Math.floor(Math.random() * 100)
+                const hayRamita = fallo <= 79
+
+                if (hayRamita) {
+                    console.log("Osea troco, me he quedado pillado!");
+                    break;
+                }
+
+                const iteaccionPrevia = i - 1;
+                
+                if (iteaccionPrevia && 
+                iteaccionPrevia % 3 === 0)
+                    console.log("")
+
+                console.log("PIUM!")
+            }
+        }
+
+        let cargador = 10
+        chauchat(cargador);
+
+       
+
+       
+
+
+    </script>
+</body>
+</html>
