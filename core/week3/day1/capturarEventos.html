@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="saludo">Parrafor 1</p>
+    <p>Parrafor 2</p>
+    <p>Parrafor 3</p>
+    <p>Parrafor 4</p>
+    <p>Parrafor 5</p>
+
+    <a id="link" href="https://www.google.com">Google</a>
+    <script>
+
+        const getRandomColor = () => {
+
+        const valoresPosibles = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+        let hex = "#";
+
+        for (let i = 1; i <= 6; i++) {
+            const randomIndex = Math.floor(Math.random() * 16)
+            hex = hex + valoresPosibles[randomIndex];
+        }
+
+        return hex
+        }
+
+        const parrafos = document.querySelectorAll('p');
+
+        console.log(parrafos);
+
+        for (let i = 0; i < parrafos.length; i++) {
+
+            parrafos[i].onclick = function (event) {
+                console.log(event.target);
+
+                event.target.style.color = getRandomColor();
+            }
+        }
+
+
+
+
+        
+        const link = document.querySelector('#link');
+
+        link.onclick = function (e) {
+            e.preventDefault();
+            console.log("Ey ya no va a google te tengo por aqui");
+        }
+        // p.onclick = function() {
+        //     console.log("Ey saludando");
+        // }
+
+    </script>
+</body>
+</html>
