@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Declaración de función declarada
+
+        function getRandomColor1() {
+
+            return ""
+        }
+
+       
+        // Declaracion de Arrow function
+       
+        // const getRandomColor = () => {
+
+        //     console.log("Hola esto es una arrow function")
+
+        //     return "#24003444"
+        // }
+        
+       
+        const getRandomColor = () => {
+
+            const valoresPosibles = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+            let hex = "#";
+            
+            for (let i = 1; i <= 6; i++) {
+                const randomIndex = Math.floor(Math.random() * 16)
+                hex = hex + valoresPosibles[randomIndex];
+            }
+        
+            return hex
+        }
+
+        
+
+        console.log(getRandomColor());
+        
+        //console.log("El color calculado es: " + getRandomColor())
+        
+
+        const suma = (numero1, numero2) => numero1 + numero2;
+        
+
+        // console.log(suma(3, 4 + 6) + suma(1,2));
+
+    </script>
+</body>
+</html>

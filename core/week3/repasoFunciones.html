@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("salida")
+
+        let edad = 20;
+        const bootcamp = "fullstack"
+        
+        function saludar(saludado, numeroCaramelos, diabetico) {
+
+                let msg = ""
+                if (diabetico && numeroCaramelos >= 0) {
+                    msg += "Ten cuidado cn tu salud pero hola " + saludado;
+                } else {
+                    msg += "Hola " + saludado + " disfruta los " + numeroCaramelos + " caramelos";
+                }
+
+                return msg;
+        
+        }
+
+        console.log(saludar("Antonio", 5, true));
+        saludar("Rafa", 0, false);
+        //saludar("Felipe");
+
+        const userName = prompt("Escribe tu nombre");
+
+        console.log(typeof userName);
+        
+        console.log("Esto ha escrito: " + userName);
+        
+
+
+
+    </script>
+</body>
+</html>

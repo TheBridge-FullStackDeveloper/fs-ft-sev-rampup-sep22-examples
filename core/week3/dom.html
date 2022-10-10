@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Mis tareas</h1>
+
+    <a class="addTask" href="#">Añade task</a>
+
+    <ul id="tasks"></ul>
+
+
+    <script>
+
+            
+        
+        function addTask() {
+            const taskName = prompt("Escribe el asunto de la tarea:")
+            const tasksList = document.getElementById('tasks');
+            
+            // Crea el nodo
+            const newTask = document.createElement('li');
+            // Añade el texto al nodo oelemento
+            newTask.innerText = taskName;
+    
+            // Añade el elemento al final de los hijos del nodo o elemento tasksList
+            
+            tasksList.appendChild(newTask);
+
+            // tasksList.innerHTML += `<li>${taskName}</li>`;
+        }
+
+        function removeTask(node) {
+            console.log(node);
+
+            const tasksList = document.getElementById('tasks');
+            tasksList.removeChild(node);
+        }
+
+
+        document
+            .querySelector('.addTask')
+            .onclick = addTask;
+        
+        // setTimeout(() => {
+        //     const firstTask = document.querySelectorAll('li')[0];
+        //     removeTask(firstTask);
+        // }, 5000)
+
+        
+        const disparada = () => {
+            const taskList = document.querySelector('#tasks');
+            taskList.firstChild.innerHTML += "<a href='#'>link</a>";
+            // removeTask(taskList.firstChild);
+        }
+        
+        setTimeout(disparada, 10000)
+
+        
+
+
+    </script>
+    
+</body>
+</html>
