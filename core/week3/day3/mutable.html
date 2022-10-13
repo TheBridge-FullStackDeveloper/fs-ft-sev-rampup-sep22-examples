@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <img src="img/perro1.jpg" alt="perro1">
+    <img src="img/perro2.jpg" alt="perr2">
+
+
+
+
+    <script>
+
+
+const pedro = {    
+    nombre: "Pedro",
+    apellido: "Garcia Escobar",
+    piernas: 2
+}
+
+const marcelo = {
+    nombre: "marcelo",
+    apellido: "Pérez",
+    piernas: pedro.piernas
+};
+
+marcelo.nombre = "Marcelo";
+
+// console.log(pedro);
+// console.log(marcelo);
+
+marcelo.nombre = "Marcelo";
+
+// console.log(pedro);
+// console.log(marcelo);
+
+
+
+
+
+const imagenes = document.querySelectorAll('img')
+
+
+function pincha(event) {
+        console.log("PINCHA")
+}
+
+imagenes.forEach((imagen) => {
+
+    imagen.onclick = function (event) {
+
+    }
+})
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

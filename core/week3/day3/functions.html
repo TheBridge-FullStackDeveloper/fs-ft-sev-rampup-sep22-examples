@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body img {
+            background-color: #242424;
+
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">
+    <img src="https://uploads-ssl.webflow.com/60780bff57ddc42a6adc1d7e/607eeb4b0517b6659206c10f_thebridgelogo.svg" alt="">  
+
+<script>
+
+        const colors = ['red', 'blue', 'green', 'red', 'blue', 'green', 'red', 'blue', 'green', 'red', 'blue', 'green', 'red', 'blue', 'green', 'red', 'blue', 'green']
+
+        const getIndexRandom = (count) => Math.floor(Math.random() * count)
+        const getRandom = (array) => array[getIndexRandom(array.length)]
+        
+        const imagenes = document.querySelectorAll("img")
+        
+        imagenes.forEach((imagen) => {
+
+            imagen.onclick = function (event) {
+                event.currentTarget.src = `img/perro${getIndexRandom(2) + 1}.jpg`
+            }
+        })
+    </script>
+    
+</body>
+</html>
