@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+        div {
+            border: 1px solid red;
+            padding: 20px;
+        }
+        
+        .capa-1 {
+            background-color: blueviolet;
+        }
+
+        .capa-2 {
+            background-color: coral;
+        }
+
+        .capa-3 {
+            background-color: greenyellow;
+        }
+</style>
+</head>
+<body>
+
+    <div class="capa-1">
+        1
+        <div class="capa-2">
+            2
+            <div class="capa-3">3</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <form action="#">
+        <fieldset>
+            <input type="text">
+        </fieldset>    
+    </form> -->
+
+    <script>
+
+        
+        const c1 =  document.getElementsByClassName('capa-1')[0]
+        const c2 = document.getElementsByClassName('capa-2')[0]
+        const c3 = document.getElementsByClassName('capa-3')[0]
+
+        c3.addEventListener("click", function(e) {  
+           
+                console.log("capa3")
+                c3.style.backgroundColor = "red";
+
+                
+        
+            
+            
+        }, true)
+
+        c2.addEventListener("click", function(e) {
+        
+                console.log("capa2")
+                c2.style.backgroundColor = "red";
+                console.log(e.target)
+      
+            
+        }, true)
+ 
+        c1.addEventListener("click", function(e) {  
+           
+                console.log("capa1")
+                c1.style.backgroundColor = "red";
+                
+           // e.stopPropagation()
+        }, true)
+
+        document.body.onclick = function () {
+            setTimeout(() => {
+                console.log("SOY EL BODY")
+                document.body.style.backgroundColor = "green";
+            
+            }, 4000)
+            
+        }
+
+    </script>
+    
+</body>
+</html>

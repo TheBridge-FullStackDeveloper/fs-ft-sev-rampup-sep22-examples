@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            background-color: blue;
+            padding: 50px;
+        }
+    </style>
+        
+    
+</head>
+<body>
+
+
+    <div id="delegado">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quae dolor fugit nobis quam! Debitis minus commodi alias beatae expedita.</p>
+        <p>Numquam voluptatum illo id veritatis tempore eos modi odit enim distinctio, odio omnis rerum nisi sapiente minima consequatur vitae dolorem?</p>
+        <p>Omnis numquam possimus quidem, perspiciatis repellat explicabo assumenda ullam reprehenderit architecto molestiae quo iusto dolore soluta dolores! Veniam, qui tempore.</p>
+        <p>Earum aliquam iste placeat iure veritatis. Officia, neque corrupti incidunt blanditiis cum modi beatae. Excepturi sapiente suscipit minima animi reprehenderit.</p>
+        <p>Deleniti, fugit itaque quas enim necessitatibus natus distinctio tenetur sit ipsum voluptas rerum iste eius, temporibus soluta! Numquam, eius nam?</p>
+        <p>Ea deleniti iusto vitae excepturi consequuntur vel! Necessitatibus, expedita, debitis asperiores ipsa ipsum obcaecati consequuntur adipisci laborum, corporis amet error.</p>
+        <p>Distinctio exercitationem soluta asperiores accusantium minus odit, perspiciatis omnis eum. Dolorem, laudantium alias. Ut aspernatur enim deserunt. Rem, alias accusamus!</p>
+
+
+        <a href="#">Opcion</a>
+        <a href="#">Opcion</a>
+
+
+        <img src="perro1.jpg" alt="">
+        <img src="perro2.jpg" alt="">
+      
+
+    </div>
+
+    <script>
+
+        const parrafos = document.querySelectorAll('p')
+
+        const div = document.querySelector('#delegado')
+
+        // parrafos.forEach((p) => {
+        //     p.addEventListener('click', function(e) {
+        //         e.target.style.backgroundColor = 'red';
+        //     })
+        // })
+
+
+
+        div.addEventListener('click', function(e) {
+            if (e.target && e.target.nodeName === "P")
+                e.target.style.backgroundColor = 'red';     
+        })
+
+
+        document.body.addEventListener("click", function(e) {
+            if(e.target && e.target.nodeName === "IMG")
+                console.log(e)
+        })
+
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

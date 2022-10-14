@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a id="google" href="https://www.google.com">Ir a google</a>
+
+
+    <script>
+
+        const a = document.getElementById("google")
+
+
+        console.log(a)
+
+        // a.onclick = function () {
+        //     alert("Soy un evento semantico")
+        // }
+
+        // a.onclick = function (event) {
+        //     alert("Soy otro evento semantico")
+        //     event.preventDefault();
+
+        // }
+
+        const addNumberClick = (e) => console.log("Click 1"); 
+        const addPreventDefault = (e) => e.preventDefault();
+        const showAlert = (e) => alert("Sigo aquí");
+
+        a.addEventListener("click", addNumberClick)
+        a.addEventListener("click", addPreventDefault)
+        a.addEventListener("click", showAlert)
+
+        a.removeEventListener("click", showAlert)
+     
+        
+    </script>
+</body>
+</html>
