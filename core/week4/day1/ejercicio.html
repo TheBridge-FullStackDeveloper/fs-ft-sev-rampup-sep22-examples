@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+Crear la clase Persona, con propiedades nombre, edad y género, y el método obtDetalles(), que muestra por pantalla las propiedades de la persona.
+
+Crear la clase Estudiante, que hereda de Persona, e incluye las propiedades curso y grupo y el método registrar(), que muestre por pantalla el resultado.
+
+Crear la clase Profesor, que hereda de Persona, e incluye las propiedades asignatura y nivel y el método asignar(), que muestre por pantalla el resultado.
+
+    <script>
+
+        class Persona {
+            constructor(nombre, edad, genero) {
+                this.nombre = nombre
+                this.edad = edad
+                this.genero = genero
+            }
+
+
+            obtDetalles() {
+                console.log(this.nombre)
+                console.log(this.edad)
+                console.log(this.genero)
+            }
+        }
+
+        class Estudiante extends Persona {
+            constructor(nombre, edad, genero) {
+                super(nombre, edad, genero)
+                this.curso = null;
+                this.grupo = null;
+
+            }
+
+            registrar(curso, grupo) {
+                this.curso = curso;
+                this.grupo = grupo;
+
+                this.obtDetalles()
+            }
+
+            obtDetalles() {
+                super.obtDetalles()
+                console.log(this.curso)
+                console.log(this.grupo)
+            }
+        }
+
+        class Profesor extends Persona {
+            constructor(nombre, edad, genero) {
+                super(nombre, edad, genero);
+
+                this.asignatura = null;
+                this.nivel = null;
+
+            }
+
+
+            asignar(asignatura, nivel) {
+                this.asignatura = asignatura;
+                this.nivel = nivel;
+
+                this.obtDetalles()
+            }
+
+            obtDetalles() {
+                super.obtDetalles()
+
+                console.log(this.asignatura)
+                console.log(this.nivel)
+            }
+
+
+
+        }
+
+        const pedro = new Profesor("Pedro", 23, "M");
+
+        pedro.asignar("javascripts", 2);
+
+        const marcelo = new Estudiante("Marcelo", 23, "M");
+
+        marcelo.registrar("React", 3)    
+    </script>
+    
+</body>
+</html>
