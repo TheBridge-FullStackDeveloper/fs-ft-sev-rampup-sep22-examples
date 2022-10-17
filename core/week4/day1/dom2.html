@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ball {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(#f00, #00f);
+            position: absolute;
+            /*top: calc(50vh - 25px);*/
+        }
+
+    
+    </style>
+</head>
+<body>
+
+
+
+
+    <script>
+        const getRandomInt = (min, max) => {
+           return Math.floor(Math.random() * (max-min) - min)
+        }
+        
+        class Ball {
+            constructor(posX, posY) {
+                this.posX = posX;
+                this.posY = posY;
+
+                this.ball = document.createElement('div');
+                this.ball.classList.add("ball");
+
+                this.ball.style.left = `${this.posX}px`;
+                this.ball.style.top = `${this.posY}px`;
+
+                document.body.appendChild(this.ball);
+            }
+
+        } 
+
+    
+
+        const miarray = Array(100).fill().map(() => new Ball(getRandomInt(0,1000), getRandomInt(0,400)))
+
+      
+        const pelotas = [
+            new Ball(getRandomInt(0,400), getRandomInt(0,400)),
+            new Ball(getRandomInt(0,400), getRandomInt(0,400)),
+            new Ball(getRandomInt(0,400), getRandomInt(0,400))
+        ]
+
+            console.log(pelotas);
+
+        // setInterval(() => {
+           
+        //     ball.style.left = `${++posX}px`;
+        //     ball.style.transform = `rotate(${posX}deg)`
+     
+        // }, 10)
+    </script>
+    
+</body>
+</html>

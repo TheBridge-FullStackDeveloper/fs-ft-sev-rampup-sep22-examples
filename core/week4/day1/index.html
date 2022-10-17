@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const dani = {
+            ojos: "espectaculares",
+            manos: "mágicas",
+            cerebro: 2.5,
+            saluda: () => console.log("Hola soy dani")
+        }
+
+        // Sintaxis para crear clases
+
+        class Persona {
+
+            constructor(nombre, ojos, manos, cerebro) {
+                this.nombre = nombre;
+                this.ojos = ojos;
+                this.manos = manos;
+                this.cerebro = cerebro;
+            }
+
+           presentacion() {
+                console.log(`Hola me llamo ${this.nombre} y tengo ${this.manos} manos`);
+           }
+        }
+
+
+        class Developer extends Persona {
+            constructor(nombre, ojos, manos, cerebro, pato, stack, mochila) {
+
+                super(nombre, ojos, manos, cerebro)
+
+                this.pato = pato;
+                this.mochila = mochila;
+                this.stack = stack
+
+                this.sueldo = 200000;
+            }
+
+
+            desarrolla() {
+                this.stack.forEach(v => {
+                    console.log("Desarrollando en " + v)
+                });
+            }
+
+        }
+
+        class Gerente extends Persona {
+            constructor(nombre, ojos, manos, cerebro, presupuesto) {
+                super(nombre, ojos, manos, cerebro)
+
+                this.presupuesto = presupuesto;
+            }
+
+            subirSueldo(developer, porcentaje) {
+                console.log(`${developer.nombre} está cobrando ${developer.sueldo}`);
+
+                developer.sueldo = developer.sueldo + (developer.sueldo * porcentaje / 100)
+            }
+        }
+
+        const ruben = new Developer("Ruben", 2, 2, 2.5, true, ["html", "css", "js", "python"], true);
+
+        const andina = new Developer("Andina", 2, 3, 2.5, true, ["react", "node"], false);
+
+        const marcelo = new Gerente("Marcelo", 2, 2, 2.5, 1000000);
+
+        ruben.presentacion()
+        marcelo.presentacion()
+        andina.presentacion()
+
+        ruben.desarrolla()
+        andina.desarrolla()
+
+        
+        console.log(andina.sueldo);
+        console.log(ruben.sueldo);
+
+        marcelo.subirSueldo(ruben, 10)
+
+
+        console.log(ruben.sueldo);
+
+        marcelo.subirSueldo(ruben, 50)
+  
+        console.log(ruben.sueldo);
+
+        console.log(ruben.sueldo)
+
+
+        console.log(andina.sueldo)
+
+
+
+        // Instanciar 
+
+       
+        // console.log(ruben);
+
+        // console.log(ruben.nombre)
+
+        // console.log(andina.manos)
+        // console.log(ruben.manos)
+
+        // ruben.presentacion()
+        // andina.presentacion()
+
+    </script>
+
+
+
+    
+</body>
+</html>
