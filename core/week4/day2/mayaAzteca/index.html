@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        class Warrior {
+            constructor(life, power) {
+                this.life = life;
+                this.power = power;
+            }
+
+            attack() {
+                return this.power
+            }
+
+            defend(damage) {
+                this.life -= damage
+                console.log(this.life)
+            }
+        }
+
+        class Maya extends Warrior {
+            constructor(life, power) {
+                super(life, power);
+            }
+
+
+            drinkColaCao() {
+                this.power += 10
+            }
+        }
+
+
+        class Azteca extends Warrior {
+            constructor(life, power) {
+                super(life, power);
+            }
+
+            drinkNesquik() {
+                this.life += 10
+            }
+        }
+
+        const azteca = new Azteca(100, 30);
+        azteca.drinkNesquik()
+        console.log(azteca.life)
+
+        const maya = new Maya(50, 50);
+        maya.drinkColaCao()
+
+        console.log(maya.power)
+
+        azteca.defend(maya.attack())
+        maya.defend(azteca.attack())
+
+       
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

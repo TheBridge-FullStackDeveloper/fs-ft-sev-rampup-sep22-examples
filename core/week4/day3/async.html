@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function wait(ms) {
+                var start = Date.now(),
+                    now = start;
+                while (now - start < ms) {
+                now = Date.now();
+                }
+    }
+
+        function calcula(n1, n2) {
+            function suma(a, b) {
+                return a + b;
+            }
+
+            return suma(n1, n2)
+        }
+
+
+        console.log(calcula(3,5))
+
+        setTimeout(() => {
+            console.log("callback 1s")
+        }, 0)
+
+        wait(10000)
+
+
+        const promesa1 = new Promise((resolver, rechazar) => {
+            resolver();
+        })
+        
+
+        promesa1.then(() => console.log("PROMESA TERMINADA"))
+    
+        console.log("hola")
+        console.log(calcula(4,3))
+        
+    </script>
+</body>
+</html>

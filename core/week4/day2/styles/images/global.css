@@ -1,0 +1,23 @@
+.dog {
+    width: 100px;
+    height: 120px;
+    
+    border: 1px solid red;
+   
+    background-image: url("./dog-down.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    bottom: 15px;
+
+
+    left: calc(50vw - 50px)
+    
+}
+
+.board {
+    border: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+}

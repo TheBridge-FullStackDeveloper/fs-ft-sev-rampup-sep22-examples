@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    20.- Crea el objeto Nevera con las propiedades: array productos y el getter numProductos {devuelve la suma del número de productos}
+
+ 21.- Crea el objeto Congelador con las propiedades: array productos y el setter compra {acepta un array como argumento y añade cada elemento a this.productos}
+
+ 22.- Crea el objeto Pecera con las propiedades: array peces y el getter numPeces {retorna el número de peces} y el setter nuevosPeces {acepta como argumento un array y añade cada elemento a this.peces}
+
+ 23.- Crea la clase Lavavajillas con las propiedades: carga (objeto {platos: numPlatos, vasos: numVasos}), el setter nuevaCarga {acepatará como argumento un objeto {platos: numPlatos, vasos: numVasos} y actualizará carga, para llamarlo se podrá utilizar el operador de propagación, si una variable queda sin definir, su valor no deberá cambiar}
+
+ 24.- Crea la clase ColeccionLibros con la propiedad array libros y el getter ultimaAdquisicion {devuelve el último elemento de this.libros}
+
+ 25.- Crea la clase Humano con las propiedades: nombre y nacimiento además, deberá tener un getter edad {devuelva new Date().getFullYear() - nacimiento} y un setter edad(nuevaEdad) {cambiará nacimineto por new Date().getFullYear() - nuevaEdad}
+    <script>
+
+       const Nevera = {
+        arrayProductos: [],
+        get numProductos() {
+            return arrayProductos.length
+        }
+       }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       
+        function suma(n1, n2) {
+            if (isNaN(n1) || isNaN(n2)) {
+
+                throw new Error("Alguno de los dos argumentos no es un número");
+            } 
+        
+            return n1 + n2;
+        } 
+
+        //console.log(suma("-", 2))
+
+
+        class Perro {
+            constructor(raza, edad) {
+
+                if(raza.length === 0) {
+                    throw new Error("Es requerido especificar raza")
+                }
+
+                if (edad < 0 || isNaN(edad)) {
+                    throw new Error("La edad debe ser un número mayor que cero")
+                }
+
+                this.razaPerro = raza;
+                this.edadPerro = edad;
+                
+            }
+        }
+
+        const rufo = new Perro("Pastor Alemán", 21)
+
+        console.log(rufo.razaPerro);
+
+
+        try {
+            const rufo2 = new Perro("Pastor Alemán", -21)
+        } catch(error) {
+            console.log("Ey he capturado un error")
+
+            console.log(error.message);
+        }
+
+
+    </script>
+</body>
+</html>

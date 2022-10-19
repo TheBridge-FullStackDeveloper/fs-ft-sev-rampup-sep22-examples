@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Warrior {
+
+            constructor(armor) {
+                this.armor = armor;
+            }
+
+
+            get armor() {
+                 return this._armor + " DE ARMADURA";
+            }
+
+            set armor(newArmor) {
+                this._armor = newArmor/10
+            }
+
+        }
+
+        const w1 = new Warrior(40);
+        console.log(w1)
+        console.log(w1.armor);
+
+
+
+
+
+
+
+
+//         class Warrior {
+
+// constructor(life, armor, power) {
+
+//     this._life = life;
+    
+
+//     this.armor = armor;
+        
+//     this.power = power;
+// }
+
+// receiveHit(damage) {
+//     if (this._isDie()) return false;
+
+//     this._life -= damage
+   
+//     if (this._isDie()) {
+//         this._life = 0;
+//         this._die(); 
+//     }       
+// }
+
+// get life() {
+//     return life + " de vida"
+// }
+
+// get armor() {
+//     return this._armor;
+// }
+
+// set armor(newArmor) {
+//     this._armor = newArmor + "hola"
+// }
+
+
+// _isDie() {
+//     return life <= 0
+// }
+
+// _die() {
+//     console.log("Me he muerto")
+// }
+// }
+
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // funcion: getDiaSemana(fecha) => día de la semana (string)
+        // in: "12/10/2022"
+        // out: "Lunes"
+
+        function getDiaSemana(fecha) {
+
+            const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            const fechaFormateada = fecha.split("/").reverse().join("-")
+
+            const objFecha = new Date(fechaFormateada)
+
+            return diasSemana[objFecha.getDay()]
+        }
+
+
+        
+
+        console.log(getDiaSemana("12/10/1200"));
+
+
+    </script>
+</body>
+</html>
