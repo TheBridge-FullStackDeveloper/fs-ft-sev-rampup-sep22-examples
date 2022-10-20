@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function main() {
+            console.log('A');
+
+            setTimeout(
+                function exec() { console.log('B') }
+                ,0)
+            runWhileLoopForNSeconds(3);
+            console.log('C');
+        }
+        fetch('htps://dog.ceo/api/breeds/image/random')
+            .then(response => console.log('D'))
+            .catch(error => console.log('F'))
+        main();
+        function runWhileLoopForNSeconds(sec) {
+            let start = Date.now();
+            now = start;
+            console.log('E')
+            while (now -start  < (sec * 1000)) {
+                now = Date.now();
+            }
+        }
+
+// Ruben A B D E C
+// Neiva A D F B C A D F E
+// Ismael D A B E C 
+// Fulgencio A C B E D E C 
+// Rufino A B D E (NS/NC)
+// Felipe A F E 
+// Marcelo A C D F E B
+// Rafa D A C B E
+// Dani A B C D E 
+
+    </script>
+</body>
+</html>
