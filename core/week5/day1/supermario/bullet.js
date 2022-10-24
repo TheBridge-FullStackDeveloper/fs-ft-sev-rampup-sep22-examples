@@ -27,11 +27,14 @@ class Bullet {
     }   
 
     move() {
+        // Avance pelota
         this.x += this.vx;
 
+        // Caida pelota 
         this.vy += this.gravity;
         this.y += this.vy;
 
+        // Rebote
         if(this.y > this.y0 + this.playerH) {
             this.vy *= -1;
         }
