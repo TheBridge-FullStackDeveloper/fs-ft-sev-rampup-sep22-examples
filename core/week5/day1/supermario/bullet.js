@@ -16,7 +16,7 @@ class Bullet {
 
         this.gravity = 0.25;
     }
-
+    
 
     draw() {
         this.ctx.beginPath();
