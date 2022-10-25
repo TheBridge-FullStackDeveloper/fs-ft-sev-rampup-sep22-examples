@@ -89,6 +89,27 @@ canvas {
         canvasDOMEl.setAttribute("height", `${h}px`)
 
 
+        class Obstacle {
+
+            constructor(x, h2,w2, ctx) {
+                
+                this.ctx = ctx;
+                this.w = 5;
+                this.h = 60;
+
+                this.x = x;
+                this.y = h2 - 30;
+            }
+
+            draw() {
+                this.ctx.beginPath();
+                this.ctx.fillStyle = "#3370d4";
+                this.ctx.rect(this.x, this.y, this.w, this.h);
+                this.ctx.fill();
+                this.ctx.closePath();
+            }
+        }
+
         class Ball {
 
             constructor(h2,w2, ctx) {
@@ -101,24 +122,41 @@ canvas {
                 this.canvasW2 = w2;
 
                 this.dx = 0;
+                this.dy = 0;
                 this.v = 0;
 
 
                 document.onkeydown = function (event) {
-                    if(event.keyCode === 38) {
-                        console.log("PULSA")
+                    if(event.keyCode === 39) {
+                        //console.log("PULSA")
 
                         this.dx = 2
                     }
+
+                    if(event.keyCode === 40) {
+                        //console.log("PULSA")
+
+                        this.dy = 2
+                    }
+
                 }.bind(this)
 
                 document.onkeyup = function (event) {
-                    if(event.keyCode === 38) {
-                        console.log("DEJA DE PULSAR")
+                    if(event.keyCode === 39) {
+                        //console.log("DEJA DE PULSAR")
 
                         this.dx = -2
                     }
+
+                    if(event.keyCode === 40) {
+                        this.dy = -2
+                    }
+
+
                 }.bind(this)
+
+
+                
             }
 
             // draw() {
@@ -146,6 +184,9 @@ canvas {
                 this.ctx.fillStyle = "#3370d4";
                 this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
                 this.ctx.fill();
+                this.ctx.closePath();
+
+
 
 
             }
@@ -153,29 +194,56 @@ canvas {
             move(){
 
                 if(this.x > this.canvasW2) {
-                    this.v += 0.2;
-                    this.y += this.v;
+                   // this.v += 0.2;
+                   // this.y += this.v;
                 }
 
                 
-                this.x += this.dx + this.v;
+                this.x += this.dx // + this.v;
+
+                this.y += this.dy // + this.v;
             }
         }
 
         const pelota1 = new Ball(h2,w2, ctx);
+
+        const obstacle1 =  new Obstacle(w2,h2,w2, ctx);
+
+        const obstacle2 =  new Obstacle(50,h2 + 120,w2, ctx);
 
         const myInterval = setInterval(() => {
             ctx.clearRect(0,0,w,h);
             
             pelota1.move();
             pelota1.draw();
-           
+            obstacle1.draw();
+            obstacle2.draw();
             //clearInterval(myInterval)
 
+            console.log(
+                isCollision(pelota1, obstacle1) ? 
+                    "COLISION" : 
+                    ""
+                )
+            console.log(
+                isCollision(pelota1, obstacle2) ? 
+                    "COLISION" : 
+                    ""
+                )
+           
         }, 1000 / 60)
         
+
         
-      
+        function isCollision(ball, obstacle) {
+            return (
+                ball.x + ball.r >= obstacle.x &&
+                ball.x - ball.r <= obstacle.x + obstacle.w &&
+                ball.y + ball.r >= obstacle.y &&
+                ball.y - ball.r <= obstacle.y + obstacle.h
+                )
+        }
+     
     </script>
 </body>
 </html>
