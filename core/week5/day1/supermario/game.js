@@ -101,7 +101,7 @@ const Game = {
     },
 
     isCollision: function() {
-        console.log("hol<colisi")
+   
         return this.obstacles.some(obstacle => {
             return (this.player.x + this.player.w >= obstacle.x &&
             this.player.x < obstacle.x + obstacle.w &&
