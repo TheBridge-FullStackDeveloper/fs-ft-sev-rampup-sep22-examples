@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        const user = {
+            name: "Fulgencio",
+            email: "fulgencio@duello.com",
+            edad: 25,
+            cv: "cv.pdf"
+        }
+
+        // this.canvas.width
+        // this.canvas.height
+
+        // const {width: w, height: h} = this.canvas
+       
+        console.log(user.name)
+
+        const {email} = user
+        console.log(email)
+
+        // Con valores por defecto
+
+        const {name, edad, isLogged = "manolito" } = user
+        console.log(isLogged)
+
+        // function suma(a, b = 10) {
+        //     console.log(a + b);
+        // }
+
+        // suma(3,5)
+        
+        // ALIAS
+        
+        const {cv: curriculum} = user
+        
+        console.log(curriculum)
+
+        // COMO PARAMETROS EN FUNCIONES
+
+            
+        //const age = 36;
+        const age = user.edad 
+
+        function cumplePrimaveras({edad}){
+            console.log(++edad)
+        }
+
+        cumplePrimaveras(user)
+
+
+        // CON ARRAYS
+        const numbers = [1, 2, 3, 4]
+        
+        const [numero1, numero2] = numbers
+
+        // const numero11 = number[0]
+        // const numero22 = number[1]
+        console.log(numero1)
+        console.log(numero2)
+
+        const [num1,, num3] = numbers
+
+        console.log(num3)
+
+        
+        
+    </script>
+    
+
+</body>
+</html>
