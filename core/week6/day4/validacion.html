@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #query {
+       
+        -webkit-appearance: none;
+        appearance: none;
+
+    }
+       
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        #queryError {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form id="fPrueba" action="https://www.google.com/search" method="get" novalidate>
+        <label>Opcion 1<input id="query" name="q" minlength="5" type="text" required autocomplete="off"></label>
+        <p id="queryError">Error de consulta</p>
+        <label>Opcion 2<input name="edad" type="text"></label>
+
+        <input type="submit">
+    </form>
+    
+
+    <script>
+    
+    const fPrueba = document.getElementById("fPrueba");
+    const query = document.getElementById("query");
+
+    const queryError = document.getElementById("queryError");
+
+    query.addEventListener("input", function(event){
+        
+        // if (query.validity.valid) {
+        //     queryError.style.display = 'none';
+        // } else {
+        //     showError()
+        // }
+    });
+
+   fPrueba.addEventListener('submit', function (event) {
+        
+       if (!query.validity.valid) {
+
+           event.preventDefault();
+           showError()
+            
+       } else {
+           queryError.style.display = 'none'; 
+           fPrueba.submit()
+       }
+
+   })
+
+//https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/invalid_event
+//    query.addEventListener('valid', (e) => {
+//      showError()
+//      console.log("hola")
+//    })
+
+
+    function showError() {
+
+        if(query.validity.tooShort) {
+            queryError.textContent = 'La consulta debe tener mas de 5 caracteres';
+            queryError.style.display = 'block';
+        }
+
+        // SE ESPERA VALOR UNA VEZ SE EMPIEZA A ESCRIBIR
+        if(query.validity.valueMissing) {
+            // Si el campo está vacío
+            // muestra el mensaje de error siguiente.
+            
+            queryError.textContent = 'La consulta no puede estar vacia';
+            queryError.style.display = 'block';
+        }
+    }
+   
+        </script>
+</body>
+</html>

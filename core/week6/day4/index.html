@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <style>
+
+        #fContacto, #logout {
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>MIS CONTACTOS</h2>
+    <ul>
+    
+    </ul> 
+
+    <form id="fContacto" action="#">
+
+        <ol>
+            <li><label>Nombre<input name="nombre" id="nombre" type="text" required></label></li>
+            <li><label>Email<input name="email" id="email" type="email"></label></li>
+            <li><label>Mensaje<input name="email" id="mensaje" type="text"></label></li>
+            <li><label>URL imagen<input name="url" id="url" type="text"></label></li>
+
+            <li><input id="btn-submit" type="submit" value="Guarda contacto"></li>
+            
+        </ol>
+    </form>
+
+    <form id="fLogin" action="#">
+
+        <ol>
+            <li><label>usuario<input  id="user" type="text" required></label></li>
+            <li><label>Password<input id="pass" type="password"></label></li>    
+            
+            <li><input id="btn-login" type="submit" value="LOGIN"></li>
+        </ol>
+    </form>
+
+    <button id="borrarTodos">Borrar todos</button>
+
+    <button id="logout">Logout</button>
+    
+
+    <script src="seed.js"></script>
+    <script src="login.js"></script>
+    <script src="render.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
