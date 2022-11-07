@@ -4,54 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Document</title>
 
     <style>
-
-        #fContacto, #logout {
+        #fContacts {
             display: none;
         }
     </style>
-    <title>Document</title>
+
+    <!-- <script src="seed.js"></script> -->
+    <script src="util.js"></script>
+    <script src="db.js"></script>
+    <script src="render.js"></script>
+    <script src="app.js"></script>   
 </head>
 <body>
     <h2>MIS CONTACTOS</h2>
-    <ul>
-    
-    </ul> 
+    <ul></ul> 
 
-    <form id="fContacto" action="#">
-
+    <form id="fContacts" action="#" novalidate autocomplete="off">
         <ol>
-            <li><label>Nombre<input name="nombre" id="nombre" type="text" required></label></li>
-            <li><label>Email<input name="email" id="email" type="email"></label></li>
-            <li><label>Mensaje<input name="email" id="mensaje" type="text"></label></li>
-            <li><label>URL imagen<input name="url" id="url" type="text"></label></li>
+            <li><label>Nombre<input name="nombre" type="text" required></label></li>
+            <li><label>Email<input name="email" type="email"></label></li>
+            <li><label>Mensaje<input name="mensaje" type="text"></label></li>
+            <li><label>URL imagen<input name="url" type="text"></label></li>
 
-            <li><input id="btn-submit" type="submit" value="Guarda contacto"></li>
-            
+            <li><input id="btnAddContact" type="submit" value="Guarda contacto"></li>
+            <li><button id="btnRemoveContacts">Borrar todos</button></li> 
+            <li><button id="btnLogout">Logout</button></li>  
         </ol>
     </form>
 
-    <form id="fLogin" action="#">
-
+    <form id="fLogin" action="#" novalidate autocomplete="off">
         <ol>
-            <li><label>usuario<input  id="user" type="text" required></label></li>
-            <li><label>Password<input id="pass" type="password"></label></li>    
+            <li><label>usuario<input  name="user" type="text" required></label></li>
+            <li><label>Password<input name="password" type="password" required></label></li>    
             
-            <li><input id="btn-login" type="submit" value="LOGIN"></li>
+            <li><input id="btnLogin" type="submit" value="LOGIN"></li>
         </ol>
     </form>
-
-    <button id="borrarTodos">Borrar todos</button>
-
-    <button id="logout">Logout</button>
-    
-
-    <script src="seed.js"></script>
-    <script src="login.js"></script>
-    <script src="render.js"></script>
-    <script src="script.js"></script>
-
 </body>
 </html>

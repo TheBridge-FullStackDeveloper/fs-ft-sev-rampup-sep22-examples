@@ -1,5 +1,3 @@
-
-
 const estudiantes = [
     {nombre: "Marcelo", cv: "marcelo.pdf" , notas: [5,9,9,3]},
     {nombre: "Dani", cv: "dani.pdf" , notas: [3,2,9,9]},
@@ -13,7 +11,6 @@ const estudiantes = [
 for (let i = 0; i < estudiantes.length; i++) {
     console.log(estudiantes[i].nombre)
 } 
-
 
 // Devuelve undefined
 estudiantes.forEach((estudiante) => console.log(estudiante.nombre))

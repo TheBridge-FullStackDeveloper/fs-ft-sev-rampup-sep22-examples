@@ -1,52 +1,30 @@
-const ulDOMEl = document.querySelector('ul')
+const print = {
+    allContacts(contacts) {
+        $('ul').innerHTML = `<li>SIN CONTACTOS</li>`
+        if(isEmpty(contacts)) return
+        
+        $('ul').innerHTML = ''    
+        contacts.forEach(contact => this.printContact(contact));
+    },
+    printContact({name, id}) {
+        let deleteBtn = `<button 
+        data-contact="${id}"
+        class="delete">borrar</button>`
 
-const printContacto = ({nombre}) => {
-
-    let liContacto = `<li>${nombre}`
-    liContacto += `<button class="borrar" data-contacto="${nombre}">borrar</button>`
-    liContacto += `</li>`
-
-    ulDOMEl.innerHTML += liContacto;
-
-}
-
-
-    
-
-const printAllContacto = (contactos) => {
-    ulDOMEl.innerHTML = ''
-    contactos.forEach(contacto => printContacto(contacto));
-}
-
-const render = () => {
-    const fContacto = document.querySelector('#fContacto')
-
-    const fLogin = document.querySelector('#fLogin')
-
-    const logoutBt = document.querySelector('#logout')
-
-
-    fLogin.style.display = (usuarioLogueado) 
-    ? 'none'
-    : 'block'
-
-
-    logoutBt.style.display = (usuarioLogueado) 
-        ? 'block'
-        : 'block'
-
-
-    fContacto.style.display = (usuarioLogueado) 
-        ? 'block'
-        : 'none'
-
-   
-    if (contactos.length) {
-        printAllContacto(contactos);
-    } else {
-        printAllContacto([]);
-        ulDOMEl.innerHTML += `<li>SIN CONTACTOS</li>`
+        $('ul').innerHTML += `<li>${name}${deleteBtn}</li>`
     }
 }
 
-render()
+const render = () => {
+    const { getContacts, contacts = getContacts() } = ContactsData   
+    const { getUser, user = getUser()?.user} = UsersData
+
+    const show = (state) => (state) ? 'block' : 'none'
+    
+    $('#fContacts').style.display = show(getUser())
+    $('#fLogin').style.display = show(!getUser())
+    
+    $('#btnLogout').innerText = `Logout ${user}`
+   
+    print.allContacts(contacts || []); 
+}
