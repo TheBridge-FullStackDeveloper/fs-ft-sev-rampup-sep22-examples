@@ -5,16 +5,20 @@ const db = {
 }
 
 const ContactsData = (function() {
-    let allContacts = db.get('contacts')
+    let allContacts = db.get('contacts') || []
+    
+    const getContacts = ({name}) => allContacts
+        ?.filter(({user}) => user.name = name)
 
-    const getContacts = () => clone(allContacts)
+    const updateContacts = function(contacts, user) {
+      
+        let updatedContacts = allContacts
+            .filter((contact) => user.name != contact?.user.name)
 
-    const updateContacts = function(contacts) {
-        allContacts = contacts
+        updatedContacts = [...updatedContacts, ...contacts] 
+        if(isEmpty(updatedContacts)) return db.remove("contacts")
         
-        if(isEmpty(contacts)) return db.remove("contacts")
-        
-        db.set("contacts", contacts)
+        db.set("contacts", updatedContacts)
     }
     
     return { getContacts, updateContacts }

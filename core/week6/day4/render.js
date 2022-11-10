@@ -16,9 +16,14 @@ const print = {
 }
 
 const render = () => {
-    const { getContacts, contacts = getContacts() } = ContactsData   
+    const { getContacts } = ContactsData   
     const { getUser, user = getUser()?.user} = UsersData
 
+    if(!user) return
+
+    console.log(user)
+    const contacts = getContacts(user)
+    console.log(contacts)
     const show = (state) => (state) ? 'block' : 'none'
     
     $('#fContacts').style.display = show(getUser())

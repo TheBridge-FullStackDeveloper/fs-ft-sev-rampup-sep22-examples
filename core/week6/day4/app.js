@@ -13,16 +13,20 @@ addEventListener('DOMContentLoaded', (e) => {
         e.preventDefault()
             
         const { getContacts, updateContacts } = ContactsData
-        const { getUsers, login, logout } = UsersData
+        const { getUsers, getUser, login, logout } = UsersData
 
+        const user = getUser();
         const users = getUsers();
-        const contacts = getContacts()
+        const contacts = getContacts(user)
       
         if (e.target === $('#btnAddContact')) {
+            if (!user) return
+
             const [name, email, messege, url] = getFormValues('#fContacts input')
         
             const contact = { 
                 id: Date.now(),
+                user,
                 name, email, messege, url 
             }
         
@@ -30,14 +34,14 @@ addEventListener('DOMContentLoaded', (e) => {
                 ? [contact] 
                 : [...contacts, contact]
         
-            updateContacts(updatedContacts)
+            updateContacts(updatedContacts, user)
         } else if (Array.from($$('.delete')).includes(e.target)) { 
             const contactId = +e.target.dataset.contact
-        
-            const updatedContacts = getContacts()
+            
+            const updatedContacts = contacts
                 .filter(({id}) => id !== contactId)
             
-            updateContacts(updatedContacts)
+            updateContacts(updatedContacts, user)
         } else if (e.target  === $('#btnLogin')) {
             const [userInput, passInput] = getFormValues('#fLogin input')
          
@@ -48,7 +52,7 @@ addEventListener('DOMContentLoaded', (e) => {
           
             loggedUser && login(loggedUser)
         }
-        else if (e.target === $('#btnRemoveContacts')) updateContacts([])
+        else if (e.target === $('#btnRemoveContacts')) updateContacts([], user)
         else if (e.target === $('#btnLogout')) logout()
     
         render()  
