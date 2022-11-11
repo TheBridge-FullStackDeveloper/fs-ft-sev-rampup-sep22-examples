@@ -4,7 +4,7 @@ const fs = require("fs")
 const port = 3001
 
 http.createServer(function(request, response) {
-
+    console.log("EY")
     if (request.url === "/quienes-somos") {
         response.setHeader("Content-Type", "text/html");
         response.write("<h1>Node is awesome</h1>")
