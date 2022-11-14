@@ -8,7 +8,6 @@ app.use(express.static('public'))
 
 app.get('/quienes-somos', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/quienes-somos.html'))
-    
 })
 
 app.get('/', (req, res) => {
