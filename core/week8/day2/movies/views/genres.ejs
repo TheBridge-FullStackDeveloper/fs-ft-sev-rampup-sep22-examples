@@ -1,0 +1,7 @@
+<%- include('./nav'); %>
+
+<ul>
+    <% for (const genre of genres) { %>
+        <li><a href="./movies/<%= genre %>"> <%- genre %></li>
+    <% } %>
+</ul>
