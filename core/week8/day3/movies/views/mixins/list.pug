@@ -1,0 +1,7 @@
+mixin list(items)
+    ul
+        each item in items
+            if item.to 
+                li: a(href="movies/" + item.to)= item.text
+            else
+                li= item.text

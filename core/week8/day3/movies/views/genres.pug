@@ -1,0 +1,9 @@
+include particles/doc.pug
+include particles/nav.pug
+
+include mixins/list.pug
+section.genres
+    +list(genres.map(genre => ({
+        text: genre,
+        to: genre,
+    })))
