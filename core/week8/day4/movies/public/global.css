@@ -1,0 +1,56 @@
+body > * {
+    padding: 2rem 4rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+nav li {
+    
+
+   
+}
+nav a {
+    padding: 1rem 2rem;
+    color: darkcyan;
+    background-color: antiquewhite;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: antiquewhite;
+    background-color: darkcyan;
+}
+
+.genres ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    gap: 2rem;
+}
+.genres li {
+    line-height: 200px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.genres a {
+    text-decoration: none;
+    color: darkcyan;
+    font-size: 1.5rem;
+    font-family: Arial;
+    font-variant: small-caps;
+    display: block;
+    height: 100%;
+}
+
+.movies li {
+    background-color: lightgray;
+    padding: .5rem 1rem;
+    margin-top:.5rem;
+}

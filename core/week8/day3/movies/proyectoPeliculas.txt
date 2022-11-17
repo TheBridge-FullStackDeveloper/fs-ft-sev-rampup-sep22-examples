@@ -1,0 +1,8 @@
+
+La aplicación mostrará peliculas a todos los usuarios, de cada pelicula se quire mostrar el título, los géneros, una sinópsis, el año de publicación y el Director. Los usuarios registrado podrán elegir sus peliculas favoritas y consultarlas. Además podrán comentar las fichas de las películas con un texto de menos de 256 caracteres. Los usuarios se registran con su correo electrónico y contraseña. Se le dará también opción de elegir un numero de usuario. Del comentario queremos publicar la fecha y hora en e lque se hizo.
+
+
+
+
+
+

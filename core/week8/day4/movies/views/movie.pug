@@ -1,0 +1,17 @@
+- const {movie, path, title} = data
+
+include particles/doc.pug
+include particles/nav.pug
+
+include mixins/list.pug
+
+section.movie
+    h2= movie.title
+    p: em= movie.director
+    p= movie.plot
+    h3 Generos
+    +list(movie.genres.map(genre => ({text: genre})))
+    h3 Reparto 
+    p= movie.actors
+    img(src=movie.posterUrl)
+

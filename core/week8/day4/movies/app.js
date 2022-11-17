@@ -11,26 +11,35 @@ app.set('view engine', 'pug')
 app.set('views', './views')
 
 app.get('/movies', (req, res) => {
-    console.log(req.path);
-    res.render('movies', {data: {
+    res.render('movies', { data: {
+        title: "Peliculas",
         path: req.path,
         movies: movies.getMovies()
     }})
 })
 
 app.get('/movies/:genre', (req, res) => {
-    console.log(req.path);
     res.render('movies', {data: {
+        title: "Peliculas de " + req.params.genre,
         path: req.path,
         movies: movies.getMoviesByGenre(req.params.genre)
     }})
 })
 
-app.get('/genres', (req, res) => {
-    console.log(req.path);
-    res.render('genres', {data: {
+app.get('/movie/:title', (req, res) => {
+    res.render('movie', {data: {
+        title: "Ficha de " + req.params.title,
         path: req.path,
-        genres: genres.getGenres()}})
+        movie: movies.getMovieByTitle(req.params.title)
+    }})
+})
+
+app.get('/genres', (req, res) => {
+    res.render('genres', {data: {
+        title: "Generos",
+        path: req.path,
+        genres: genres.getGenres()
+    }})
 })
 
 app.get('*', (req, res) => {

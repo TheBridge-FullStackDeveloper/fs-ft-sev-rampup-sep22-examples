@@ -1,7 +1,10 @@
+- const {path, movies} = data
+
 include particles/doc.pug
 include particles/nav.pug
 
 include mixins/list.pug
+
 section.movies
     p: em Mostrado #{movies.length} peliculas
     +list(movies.map(movie => ({text: movie.title})))
