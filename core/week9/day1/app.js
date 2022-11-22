@@ -61,5 +61,4 @@ app.post('/ping', (req, res) => {
     res.status(200).json({ping: "post pong"})
 })
 
-
 app.listen(3000)
