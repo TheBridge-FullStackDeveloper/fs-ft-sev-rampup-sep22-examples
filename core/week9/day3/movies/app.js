@@ -19,6 +19,7 @@ app.get('/movies', (req, res) => {
 
 app.get('/movies/:genre', (req, res) => {
     //Aquí tu código
+    
     res.render('movies', {data: {
         title: "Peliculas de " + req.params.genre,
         path: req.path,

@@ -1,4 +1,4 @@
-Hemos recuperado un pendrive en Montequinto con lo que parece un proyecto de node sin terminar.
+# Hemos recuperado un pendrive en Montequinto con lo que parece un proyecto de node sin terminar.
 
 1. Necesitamos que reviséis el código fuente para adivinar sus dependencias. Inicializa un nuevo proyecto node e instálalas
 
