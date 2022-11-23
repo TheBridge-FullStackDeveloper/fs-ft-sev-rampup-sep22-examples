@@ -6,7 +6,7 @@ const app = express()
 
 app.use(helmet())
 app.use(morgan('tiny'))
-app.use(express.json()) // Instala middlewares
+app.use(express.json()) // Instala middlewares con app.use(middleware)
 
 app.use(function (req, res, next) {
     console.log("Logger: Nueva Solicitud")
