@@ -1,0 +1,13 @@
+
+- const {genres, path, title} = data
+
+include particles/doc.pug
+include particles/nav.pug
+
+include mixins/list.pug
+
+section.genres
+    +list(genres.map(genre => ({
+        text: genre,
+        to: "/movies/" + genre,
+    })))

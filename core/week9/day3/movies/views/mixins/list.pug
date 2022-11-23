@@ -1,0 +1,10 @@
+mixin list(items)
+    ul
+        each item in items
+            - const { text, to } = item
+            if to 
+                li: a(href=to)= text
+            else
+                li= text
+
+            
