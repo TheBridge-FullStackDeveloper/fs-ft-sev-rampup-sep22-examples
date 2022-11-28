@@ -1,0 +1,15 @@
+EJERCICIO 0: 
+- Crea un nuevo proyecto de npm e installa mongoose.
+
+- Crea un primer archivo para la importación (import.js). Establece conexión con la base de datas y crea el código que inserte 7 documentos en una colección de mongo mirando los datos del fichero data.js. (DEJAR QUE MONGO GENERE AUTOMATICAMENTE LAS IDS.)
+
+- Una vez estén los datos cargados resuelve los 3 ejercicios en otro archivo (solution.js). Usa async/await y encapsula el código de cada ejercicio dentro de una función diferente. 
+
+EJERCICIO 1: 
+Obten todos los cursos de backend publicados ordenados por su nombre. Selecciona solo su nombre y su autor
+
+EJERCICIO 2: 
+Obten todos los cursos de backend y frontend publicados, ordenados por precio en orden descendente y ordenados por su nombre. Selecciona solo su nombre, su autor y el precio. 
+
+EJERCICIO 3: 
+Obten todos los cursos publicados que cuesten 15 o más dolares o que tengan en su titulo la palabra días
