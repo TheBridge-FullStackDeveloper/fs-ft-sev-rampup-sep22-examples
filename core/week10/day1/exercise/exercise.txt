@@ -12,4 +12,4 @@ EJERCICIO 2:
 Obten todos los cursos de backend y frontend publicados, ordenados por precio en orden descendente y ordenados por su nombre. Selecciona solo su nombre, su autor y el precio. 
 
 EJERCICIO 3: 
-Obten todos los cursos publicados que cuesten 15 o más dolares o que tengan en su titulo la palabra días
+Obten todos los cursos publicados que cuesten 15 o más dolares, o que tengan en su titulo la palabra días
