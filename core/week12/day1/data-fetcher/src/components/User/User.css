@@ -1,0 +1,10 @@
+li {
+  background-color: #defad9;
+  color: darkblue;
+  list-style: none;
+}
+
+li em {
+  font-variant: small-caps;
+  color: darkorange;
+}
