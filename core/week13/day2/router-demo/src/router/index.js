@@ -3,6 +3,8 @@ import PublicLayout from "../layouts/PublicLayout";
 
 import Posts from "../pages/Posts";
 import CreatePost from "../pages/createPost";
+import UpdatePost from "../pages/updatePost";
+import Comments from "../pages/Comments";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,16 @@ const router = createBrowserRouter([
         element: <Posts />,
       },
       {
-        path: "/posts/create",
+        path: "/posts/:postId",
+        element: <UpdatePost />,
+      },
+      {
+        path: "/new-post",
         element: <CreatePost />,
+      },
+      {
+        path: "/comments",
+        element: <Comments />,
       },
       {
         path: "/about",

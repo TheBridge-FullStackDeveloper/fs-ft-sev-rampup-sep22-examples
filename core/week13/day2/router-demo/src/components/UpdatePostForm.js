@@ -1,28 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 
 import axios from "axios";
 
-const apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
+const apiEndpoint = "https://jsonplaceholder.typicode.com/posts/";
 
-const PostForm = () => {
+const PostForm = ({ postId }) => {
+  console.log(apiEndpoint + postId);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+
+  useEffect(() => {
+    async function getPost() {
+      const { data } = await axios.get(apiEndpoint + postId);
+
+      setTitle(data.title);
+      setBody(data.body);
+    }
+    getPost();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!title || !body) return alert("Faltan datos");
 
-    const newPost = {
-      userId: 1,
-      id: Math.floor(Math.random() * 1000),
+    const updatedPost = {
       title,
       body,
     };
 
-    const { data } = await axios.post(apiEndpoint, newPost);
+    const { data } = await axios.put(apiEndpoint + postId, updatedPost);
 
     console.log(data);
   };

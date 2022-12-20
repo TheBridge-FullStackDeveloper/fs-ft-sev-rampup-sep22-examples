@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
 
-import axios from "axios";
-import PostForm from "../components/PostForm";
-
-const apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
+import CreatePostForm from "../components/CreatePostForm";
 
 const Posts = () => {
-  const [post, setPost] = useState({});
-
   return (
     <>
       <h2>Crear nuevo Post</h2>
-      <PostForm />
+      <CreatePostForm />
     </>
   );
 };
